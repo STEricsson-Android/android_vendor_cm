@@ -230,9 +230,15 @@ else
     endif
 endif
 
+# Does this affects anything at all? wut
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(CM_VERSION) \
-  ro.modversion=$(CM_VERSION)
+    ro.cm.version=$(CM_VERSION) \
+    ro.modversion=STE-Android-$(TARGET_PRODUCT)_$(CM_VERSION) \
+    ro.developerid=diegoch \
+    ro.goo.developerid=diegoch \
+    ro.goo.rom=cm_$(TARGET_PRODUCT) \
+    ro.goo.version=$(BUILD_VERSION) \
+    ro.goo.board=$(TARGET_PRODUCT)
 
 
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
