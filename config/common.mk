@@ -230,7 +230,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=$(DEVELOPER) \
     ro.goo.rom=$(TARGET_PRODUCT) \
     ro.goo.version=$(BUILD_NUMBER) \
-    ro.goo.board=$(TARGET_PRODUCT)
+    ro.goo.board=$(PRODUCT_MODEL)
 
 
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
