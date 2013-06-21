@@ -49,14 +49,6 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 
-ifdef CM_NIGHTLY
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmodnightly
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmod
-endif
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -233,9 +225,9 @@ endif
 # Does this affects anything at all? wut
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.version=$(CM_VERSION) \
-    ro.modversion=STE-Android-$(TARGET_PRODUCT)_$(CM_VERSION) \
-    ro.developerid=diegoch \
-    ro.goo.developerid=diegoch \
+    ro.modversion=$(TARGET_PRODUCT)_$(CM_VERSION) \
+    ro.developerid=$(DEVELOPER) \
+    ro.goo.developerid=$(DEVELOPER) \
     ro.goo.rom=cm_$(TARGET_PRODUCT) \
     ro.goo.version=$(BUILD_VERSION) \
     ro.goo.board=$(TARGET_PRODUCT)
