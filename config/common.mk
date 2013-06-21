@@ -228,8 +228,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(TARGET_PRODUCT)_$(CM_VERSION) \
     ro.developerid=$(DEVELOPER) \
     ro.goo.developerid=$(DEVELOPER) \
-    ro.goo.rom=cm_$(TARGET_PRODUCT) \
-    ro.goo.version=$(BUILD_VERSION) \
+    ro.goo.rom=$(TARGET_PRODUCT) \
+    ro.goo.version=$(BUILD_NUMBER) \
     ro.goo.board=$(TARGET_PRODUCT)
 
 
