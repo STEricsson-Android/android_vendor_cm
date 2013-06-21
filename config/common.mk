@@ -223,7 +223,7 @@ else
 endif
 
 # Does this affects anything at all? wut
-PRODUCT_PROPERTY_OVERRIDES += \
+#   PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.version=$(CM_VERSION) \
     ro.modversion=$(TARGET_PRODUCT)_$(CM_VERSION) \
     ro.developerid=$(DEVELOPER) \
